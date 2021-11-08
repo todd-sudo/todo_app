@@ -15,3 +15,10 @@ sudo docker run --name todo-app -e POSTGRES_PASSWORD='qwerty' -p 5436:5432 -d --
 ```bash
 migrate -path ./schema -database 'postgres://postgres:qwerty@localhost:5432/postgres?sslmode=disable' up
 ```
+
+<h5>Зайти в базу данных</h5>
+
+```bash
+sudo docker exec -it a2bc6a20d679 bin/bash
+psql -U postgres
+```
